@@ -418,7 +418,7 @@ text-decoration: none;
     & h1 {
         white-space: nowrap;
         @media screen and (max-width: 1023px) {
-            white-space: wrap;
+            white-space: pre-wrap;
         }
     }
     & .btn {
