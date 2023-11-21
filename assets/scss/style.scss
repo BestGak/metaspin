@@ -36,6 +36,9 @@ body {
 }
 main{
     padding-top: 104px;
+    @media screen and (max-width: 1023px) {
+        padding-top: 70px;
+    }
 }
 .padding {
     padding: 120px 0 80px;
@@ -94,6 +97,7 @@ h1 {
     text-transform: uppercase;
     @media screen and (max-width: 1023px) {
         font-size: 55px;
+
     }
     @media screen and (max-width: 767px) {
         font-size: 42px;
@@ -386,9 +390,42 @@ text-decoration: none;
         max-width: 1430px;
         left: 50%;
         transform: translate(-50% , 0);
+        @media screen and (max-width: 650px) {
+            border-radius: 335.816px;
+            background: #71195B;
+            filter: blur(42px);
+            transform: 0;
+            left: 0;
+            top: 35px;
+            width: 330px;
+            height: 141px;
+        }
     }
+    &::before {
+        @media screen and (max-width: 650px) {
+            content: "";
+            position: absolute;
+            border-radius: 335.816px;
+            background: #71195B;
+            filter: blur(42px);
+            width: 175px;
+            height: 141px;
+            right: 0;
+            top: 250px;
+        
+        }
+        }
     & h1 {
         white-space: nowrap;
+        @media screen and (max-width: 1023px) {
+            white-space: wrap;
+        }
+    }
+    & .btn {
+        @media screen and (max-width: 650px) {
+            width: 100%;
+            text-align: center;
+        }
     }
     &__container {
         max-width: 696px;
@@ -400,6 +437,15 @@ text-decoration: none;
         padding-bottom: 183px;
         z-index: 2;
         position: relative;
+        @media screen and (max-width: 650px) {
+            margin-bottom: 32px;
+            padding: 80px 0 0;
+        }
+    }
+    & .container.scroll {
+        @media screen and (max-width: 650px) {
+            padding: 0 0 0 24px;
+        }
     }
     &__wrapper {
         display: grid;
@@ -410,6 +456,10 @@ text-decoration: none;
         overflow-x: auto;
         z-index: 2;
         position: relative;
+        @media screen and (max-width: 650px) {
+            gap: 8px;
+            margin-bottom: 20px;
+        }
         &-item {
             min-width: 425px;
             background: $--gradient;
@@ -417,6 +467,15 @@ text-decoration: none;
             display: flex;
             align-items: center;
             border-radius: 16px;
+            @media screen and (max-width: 650px) {
+                min-width: 326px;
+                padding: 28px 23px 28px 0;
+            }
+            &:last-of-type {
+                @media screen and (max-width: 650px) {
+                    margin-right: 24px;
+                }
+            }
             & span:nth-of-type(1) {
                 font-size: 32px;
                 line-height: 40px;
@@ -424,7 +483,10 @@ text-decoration: none;
                 color: #fff;
                 display: block;
                 margin-bottom: 4px;
-            }
+                @media screen and (max-width: 650px) {
+                    font-size: 26px;
+                }
+            } 
             & span:nth-of-type(2) {
                 font-size: 14px;
                 line-height: 20px;
@@ -446,6 +508,11 @@ text-decoration: none;
             align-items: center;
             flex-direction: column;
             gap: 8px;
+            &:last-of-type {
+                @media screen and (max-width: 650px) {
+                    margin-right: 24px;
+                }
+            }
             & img {
                 width: 40px;
                 height: 40px;
@@ -465,6 +532,9 @@ text-decoration: none;
         justify-content: center;
         gap: 26px;
         padding: 24px 0;
+        @media screen and (max-width: 650px) {
+            flex-wrap: wrap;;
+        }
         & img {
             max-width: 48px;
         }
@@ -472,6 +542,10 @@ text-decoration: none;
             font-weight: 900;
             font-size: 16px;
             color: #fff;
+            @media screen and (max-width: 650px) {
+                width: 100%;
+                text-align: center;
+            }
         }
     }
 }
@@ -492,6 +566,9 @@ text-decoration: none;
             @media screen and (max-width: 767px) {
                 flex-direction: column;
                 gap: 32px;
+            }
+            & ul li , ol li {
+                font-size: 14px;
             }
             & img {
                 max-width: 573px;
@@ -728,6 +805,9 @@ text-decoration: none;
         border-radius: 32px;
         @media screen and (max-width: 767px) {
             padding: 70px 21px;
+        }
+        @media screen and (max-width: 650px) {
+            background: url(../images/contacts_mobile.png) center center / cover no-repeat;
         }
         & h2 {
             margin-bottom: 24px;
