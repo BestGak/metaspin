@@ -798,6 +798,9 @@ text-decoration: none;
         @media screen and (max-width: 767px) {
             padding: 70px 21px;
         }
+        @media screen and (max-width: 550px) {
+            background: url(../images/contact-mobile-2.png) center center / cover no-repeat;
+        }
         & h2 {
             margin-bottom: 24px;
             line-height: 40px;

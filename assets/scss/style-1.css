@@ -970,6 +970,11 @@ ul, ol {
     padding: 70px 21px;
   }
 }
+@media screen and (max-width: 550px) {
+  .join__wrapper {
+    background: url(../images/contact-mobile-2.png) center center/cover no-repeat;
+  }
+}
 .join__wrapper h2 {
   margin-bottom: 24px;
   line-height: 40px;
