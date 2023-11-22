@@ -264,15 +264,15 @@ h3 {
   box-shadow: none;
 }
 .btn.border {
-  background-color: transparent;
-  border: 1px solid #BE20FF;
+  border-radius: 100px;
+  border: 1px solid #4DD99E;
+  background: transparent;
 }
 .btn.border:hover {
-  border: 1px solid #854BA8;
+  background: rgba(77, 217, 158, 0.3);
 }
 .btn.border:active {
-  border: 1px solid var(--Dark-Purple, #854BA8);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: rgba(77, 217, 158, 0.3);
 }
 
 p a {
