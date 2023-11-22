@@ -720,10 +720,10 @@ text-decoration: none;
     flex: 1;
 }
 /* Accordion styles */
-.question .tabs {
+.question .items {
     overflow: hidden;
 }
-.question .tab {
+.question .item {
     width: 100%;
     color: white;
     overflow: hidden;
@@ -734,10 +734,10 @@ text-decoration: none;
         padding: 24px;
     }
 }
-.question .tab:not(:last-of-type) {
+.question .item:not(:last-of-type) {
     margin-bottom: 10px;
 }
-.question .tab-label {
+.question .item_question {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -752,7 +752,7 @@ text-decoration: none;
         line-height: 34px;
     }
 }
-.question .tab-label::after {
+.question .item_question::after {
     content: "";
     background: url(../images/arrow.svg) center center / cover no-repeat;
     width: 1em;
@@ -761,7 +761,7 @@ text-decoration: none;
     transition: all 0.5s;
     // transform: rotate(90deg);
 }
-.question .tab-content {
+.question .item_answer {
     max-height: 0;
     color: #fff;
     transition: 0.5s;
@@ -781,14 +781,14 @@ text-decoration: none;
 .question .tab-close:hover {
     background: #1a252f;
 }
-.question input:checked + .tab-label {
+.open .item_question {
     padding-bottom: 24px;
 }
-.question input:checked + .tab-label::after {
+.open .item_question::after {
     transform: rotate(-180deg);
     color: #2497FF;
 }
-.question input:checked ~ .tab-content {
+.open .item_answer {
     max-height: 100vh;
     overflow: visible;
     opacity: 1;

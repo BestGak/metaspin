@@ -23,3 +23,7 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
         });
     });
 });
+
+const accordeonItems = document.querySelectorAll('.question .item');
+
+accordeonItems.forEach((item) => item.addEventListener('click' , () => item.classList.toggle('open')));

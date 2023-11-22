@@ -860,11 +860,11 @@ ul, ol {
 }
 
 /* Accordion styles */
-.question .tabs {
+.question .items {
   overflow: hidden;
 }
 
-.question .tab {
+.question .item {
   border: 2px solid var(--Dark-green, #4FAA5D);
   background: #FFF;
   width: 100%;
@@ -874,16 +874,16 @@ ul, ol {
   padding: 40px;
 }
 @media screen and (max-width: 767px) {
-  .question .tab {
+  .question .item {
     padding: 24px;
   }
 }
 
-.question .tab:not(:last-of-type) {
+.question .item:not(:last-of-type) {
   margin-bottom: 10px;
 }
 
-.question .tab-label {
+.question .item_question {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -895,22 +895,22 @@ ul, ol {
   gap: 24px;
 }
 @media screen and (max-width: 767px) {
-  .question .tab-label {
+  .question .item_question {
     font-size: 22px;
     line-height: 34px;
   }
 }
 
-.question .tab-label::after {
+.question .item_question::after {
   content: "";
-  background: url(../images/arrow.svg) center center/cover no-repeat;
+  background: url(../images/arrow-1.svg) center center/cover no-repeat;
   width: 1em;
   height: 1em;
   text-align: center;
   transition: all 0.5s;
 }
 
-.question .tab-content {
+.question .item_answer {
   max-height: 0;
   color: #112855;
   transition: 0.5s;
@@ -933,16 +933,16 @@ ul, ol {
   background: #1a252f;
 }
 
-.question input:checked + .tab-label {
+.open .item_question {
   padding-bottom: 24px;
 }
 
-.question input:checked + .tab-label::after {
+.open .item_question::after {
   transform: rotate(-180deg);
   color: #2497FF;
 }
 
-.question input:checked ~ .tab-content {
+.open .item_answer {
   max-height: 100vh;
   overflow: visible;
   opacity: 1;
